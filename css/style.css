@@ -3,6 +3,10 @@ a {
     color: #000000;
 }
 
+h1 {
+    font-weight: normal;
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -163,12 +167,12 @@ body {
 
 .hero::before {
     background-image: url("../image/autosvg.svg");
-      content: "";
-        width: 816px;
-        height: 417px;
-        position: absolute;
-        right: -124px;
-        top: 120px;
+    content: "";
+    width: 816px;
+    height: 417px;
+    position: absolute;
+    right: -124px;
+    top: 120px;
 }
 
 .hero__title {
@@ -202,4 +206,3 @@ body {
     font-weight: bold;
     padding: 18px 54px;
 }
-
