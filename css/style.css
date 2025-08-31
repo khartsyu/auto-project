@@ -1,138 +1,251 @@
-a {
-    text-decoration: none;
-    color: #000000;
-}
-
-h1 {
-    font-weight: normal;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
+/* Reset and base styles  */
+* {
     margin: 0;
+    padding: 0;
+    border: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Links */
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Common */
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+ul,
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+img,
+svg {
+    max-width: 100%;
+    height: auto;
 }
 
 address {
     font-style: normal;
 }
 
+/* Form */
+
+input,
+textarea,
+button,
+select {
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button,
+input[type="submit"] {
+    display: inline-block;
+    background: none;
+    background-color: transparent;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+legend {
+    display: block;
+}
+
+
 @font-face {
     font-family: "Inter";
     src:
         local("Inter"),
         url("../font/Inter-Bold.woff") format("woff");
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: "InterBlack";
+    font-family: "Inter";
     src:
-        local("InterBlack"),
+        local("Inter"),
         url("../font/Inter-Black.woff") format("woff");
-    font-weight: normal;
+    font-weight: 900;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: "InterMedium";
+    font-family: "Inter";
     src:
-        local("InterMedium"),
+        local("Inter"),
         url("../font/Inter-Medium.woff") format("woff");
-    font-weight: normal;
+    font-weight: 500;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: "InterRegular";
+    font-family: "Inter";
     src:
-        local("InterRegular"),
+        local("Inter"),
         url("../font/Inter-Regular.woff") format("woff");
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --color-main: #F50E30;
+    --color-basic: #FFFFFF;
+    --color-font: #000000;
+    --font: "Inter", Arial;
 }
 
 body {
-    background-color: #FFFFFF;
+    background-color: var(--color-basic);
+    margin: 0;
 }
 
 .header {
     box-sizing: border-box;
+    padding-top: 28px;
+}
+
+.header__wrap {
     display: flex;
-    max-width: 1319px;
-    min-width: 1045px;
+    width: 1280px;
+    height: 78px;
     margin-right: auto;
     margin-left: auto;
     align-items: center;
-    padding-left: 0;
-    padding-right: 37px;
-    padding-top: 28px;
-    justify-content: space-between;
 }
 
 .header__logo {
     width: 60px;
+    margin-right: 170px;
 }
 
-.header__menu__list {
+.header-list {
     display: flex;
-    flex-wrap: nowrap;
     font-size: 16px;
-    font-family: "InterRegular", sans-serif;
+    font-family: var(--font);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    margin-right: 102px;
 }
 
-.header__menu__list__item {
+.header-item {
     margin-right: 40px;
 }
 
-.header__menu__list__item:last-child {
+.header-item:last-child {
     margin-right: 0;
+}
+
+.header-link {
+    color: var(--color-font);
 }
 
 .header__address {
     display: flex;
     align-items: center;
+    gap: 32px;
 }
 
-.header__address__social__list {
+.header-social {
     display: flex;
-    flex-direction: row;
-    width: 120px;
-    padding-left: 5px;
+    width: 110px;
+    gap: 10px;
 }
 
-.header__address__social__list__icon {
-    margin-right: 12px;
-}
-
-.header__address__social__list__icon:last-child {
-    margin-right: 0;
-}
-
-.header__address__social__list__icon-telegram {
+.icon-telegram {
     display: block;
-    background-image: url("../image/telegram.svg");
+    background-color: var(--color-basic);
+    border-radius: 15px;
+    background-image: url("../image/tg.svg");
     background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    width: 30px;
+    height: 30px;
+}
+
+.icon-whatsapp {
+    display: block;
+    background-image: url("../image/wp.svg");
+    background-color: var(--color-basic);
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: 100% 100%;
     width: 30px;
     height: 30px;
 }
 
-.header__address__social__list__icon-whatsapp {
+.icon-youtube {
     display: block;
-    background-image: url("../image/whatsapp.svg");
+    background-image: url("../image/yt.svg");
+    background-color: var(--color-font);
+    border-radius: 15px;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 30px;
-    height: 30px;
-}
-
-.header__address__social__list__icon-youtube {
-    display: block;
-    background-image: url("../image/youtube.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-position: center center;
+    background-size: 18px 12px;
     width: 30px;
     height: 30px;
 }
@@ -148,17 +261,23 @@ body {
     overflow: hidden;
 }
 
-.header__address__tel {
+.header-tel {
     display: flex;
     flex-direction: column;
-    padding-left: 26px;
-    font-family: "InterMedium", sans-serif;
+    align-items: center;
+    font-family: var(--font);
+    font-weight: 500;
+    gap: 4px;
+}
+
+.tel-link {
+    color: var(--font);
 }
 
 .hero {
     display: flex;
     flex-direction: column;
-    width: 1319px;
+    width: 1280px;
     margin-right: auto;
     margin-left: auto;
     padding-top: 114px;
@@ -172,20 +291,24 @@ body {
     height: 417px;
     position: absolute;
     right: -124px;
-    top: 120px;
+    bottom: -107px;
 }
 
 .hero__title {
     max-width: 672px;
     font-size: 52px;
-    font-family: "InterBlack", sans-serif;
+    font-family: var(--font);
+    font-weight: 900;
+    line-height: 1.19;
     margin-bottom: 20px;
 }
 
 .hero__content {
     max-width: 600px;
     font-size: 20px;
-    font-family: "InterMedium", sans-serif;
+    font-family: var(--font);
+    font-weight: 500;
+    line-height: 1.6;
     margin-bottom: 44px;
 }
 
@@ -195,14 +318,13 @@ body {
 
 .hero__button {
     box-sizing: border-box;
-    border: none;
     width: 312px;
     height: 64px;
     border-radius: 8px;
-    background-color: #F50E30;
-    color: #FFFFFF;
+    background-color: var(--color-main);
+    color: var(--color-basic);
     font-size: 24px;
-    font-family: "inter", sans-serif;
-    font-weight: bold;
+    font-family: var(--font);
+    font-weight: 700;
     padding: 18px 54px;
 }
