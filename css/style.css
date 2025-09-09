@@ -150,11 +150,33 @@ legend {
     font-display: swap;
 }
 
+@font-face {
+    font-family: "Inter";
+    src:
+        local("Inter"),
+        url("../font/Inter-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SF";
+    src:
+        local("SF"),
+        url("../font/SF-Pro-Display-Semibold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --color-main: #F50E30;
     --color-basic: #FFFFFF;
     --color-font: #000000;
+    --color-container: #F4F6F8;
     --font: "Inter", Arial;
+    --font2: "SF", Arial;
 }
 
 body {
@@ -280,12 +302,14 @@ body {
     width: 1280px;
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 151px;
     padding-top: 114px;
     position: relative;
 }
 
 .hero::before {
-    background-image: url("../image/autosvg.svg");
+    background: image-set(url("../image/auto.png") type("image/png") 1x,
+            url("../image/auto@2x.png") type("image/png") 2x);
     content: "";
     width: 816px;
     height: 417px;
@@ -327,4 +351,226 @@ body {
     font-family: var(--font);
     font-weight: 700;
     padding: 18px 54px;
+}
+
+.hero2 {
+    box-sizing: border-box;
+    padding-top: 114px;
+    padding-bottom: 119px;
+    background-color: var(--color-container);
+}
+
+.hero2__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+
+.hero2__title {
+    text-align: center;
+    margin-left: 116px;
+    margin-right: 116px;
+    font-size: 44px;
+    font-family: var(--font);
+    font-weight: 800;
+    line-height: 1.23;
+    margin-bottom: 24px;
+}
+
+.hero2__content {
+    text-align: center;
+    font-size: 24px;
+    font-family: var(--font);
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+
+.hero2__button {
+    box-sizing: border-box;
+    width: 235px;
+    height: 56px;
+    border-radius: 8px;
+    background-color: var(--color-main);
+    color: var(--color-basic);
+    font-size: 20px;
+    font-family: var(--font2);
+    font-weight: 700;
+    padding: 14px 39px;
+}
+
+.hero2__list {
+    display: flex;
+    padding-top: 40px;
+    gap: 23.5px;
+}
+
+.list-item {
+    width: 411px;
+    background-color: var(--color-basic);
+    padding: 24px 32px 85px 32px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
+}
+
+.list-item:first-child::before {
+    background: image-set(url("../image/key.png") type("image/png") 1x,
+            url("../image/key@2x.png") type("image/png") 2x);
+    content: "";
+    width: 94px;
+    height: 82px;
+    position: absolute;
+    right: 30px;
+    bottom: 18px;
+}
+
+.list-item:nth-child(2)::before {
+    background: image-set(url("../image/redauto.png") type("image/png") 1x,
+            url("../image/redauto@2x.png") type("image/png") 2x);
+    content: "";
+    width: 221.39px;
+    height: 120px;
+    position: absolute;
+    right: 10.6px;
+    bottom: 0;
+}
+
+.list-item:nth-child(3)::before {
+    background: image-set(url("../image/coins.png") type("image/png") 1x,
+            url("../image/coins@2x.png") type("image/png") 2x);
+    content: "";
+    width: 222px;
+    height: 127px;
+    position: absolute;
+    right: 16px;
+    bottom: 17px;
+}
+
+.item-title {
+    font-size: 36px;
+    font-family: var(--font);
+    font-weight: 700;
+    margin-bottom: 27px;
+}
+
+.item-content {
+    font-size: 16px;
+    font-family: var(--font);
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+.aboutus {
+    display: flex;
+    gap: 100px;
+}
+
+.aboutus__picture {
+    width: 50%;
+    background-color: var(--color-container);
+}
+
+.aboutus__img {
+    width: 906px;
+    height: 656px;
+    object-fit: cover;
+}
+
+.aboutus__info {
+    width: 50%;
+    padding-top: 52px;
+    padding-left: 50px;
+
+}
+
+.info-title {
+    font-size: 44px;
+    font-family: var(--font);
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.info-content {
+    font-size: 24px;
+    font-family: var(--font);
+    font-weight: 500;
+    line-height: 1.33;
+    margin-bottom: 36px;
+}
+
+.info-advantage {
+    margin-bottom: 10px;
+}
+
+.advantage-item {
+    font-size: 20px;
+    font-family: var(--font);
+    font-weight: 400;
+    margin-bottom: 38px;
+    padding-left: 76px;
+    position: relative;
+}
+
+.advantage-item:first-child::before {
+    position: absolute;
+    left: 0;
+    top: -12px;
+    background-image: url("../image/car.svg");
+    background-color: var(--color-main);
+    content: "";
+    width: 52px;
+    height: 52px;
+    border-radius: 26px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 36px 36px;
+}
+
+.advantage-item:nth-child(2)::before {
+    position: absolute;
+    left: 0;
+    top: -12px;
+    background-image: url("../image/medal.svg");
+    background-color: var(--color-main);
+    content: "";
+    width: 52px;
+    height: 52px;
+    border-radius: 26px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 36px 36px;
+}
+
+.advantage-item:nth-child(3)::before {
+    position: absolute;
+    left: 0;
+    top: -12px;
+    background-image: url("../image/truck.svg");
+    background-color: var(--color-main);
+    content: "";
+    width: 52px;
+    height: 52px;
+    border-radius: 26px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 36px 36px;
+}
+
+.info-feature {
+    font-size: 16px;
+    font-family: var(--font);
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 12px 20px;
+    border: 3px solid rgba(250, 0, 44, 0.15);
+    border-radius: 10px;
+    margin-bottom: 46px;
 }
