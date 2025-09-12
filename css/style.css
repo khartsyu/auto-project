@@ -340,13 +340,16 @@ body {
     text-transform: uppercase;
 }
 
-.hero__button {
+.button {
     box-sizing: border-box;
-    width: 312px;
-    height: 64px;
     border-radius: 8px;
     background-color: var(--color-main);
     color: var(--color-basic);
+}
+
+.hero__button {
+    width: 312px;
+    height: 64px;
     font-size: 24px;
     font-family: var(--font);
     font-weight: 700;
@@ -391,12 +394,8 @@ body {
 }
 
 .hero2__button {
-    box-sizing: border-box;
     width: 235px;
     height: 56px;
-    border-radius: 8px;
-    background-color: var(--color-main);
-    color: var(--color-basic);
     font-size: 20px;
     font-family: var(--font2);
     font-weight: 700;
@@ -517,6 +516,7 @@ body {
     position: relative;
 }
 
+
 .advantage-item:first-child::before {
     position: absolute;
     left: 0;
@@ -574,4 +574,13 @@ body {
     border: 3px solid rgba(250, 0, 44, 0.15);
     border-radius: 10px;
     margin-bottom: 46px;
+}
+
+.aboutus__button {
+    width: 235px;
+    height: 56px;
+    font-size: 20px;
+    font-family: var(--font2);
+    font-weight: 700;
+    padding: 14px 39px;
 }
