@@ -1,7 +1,8 @@
 .reviews {
   box-sizing: border-box;
-  padding-top: 100px 27px;
+  padding: 100px 27px;
   background-color: var(--color-container);
+  overflow-x: hidden;
 }
 
 .reviews__wrap {
@@ -21,7 +22,7 @@
   display: flex;
   gap: 24px;
   width: 1917px;
-  transform: translateX(-200px);
+  transform: translateX(-222px);
   align-items: center;
   margin: 0 auto 84px;
   position: relative;
@@ -96,7 +97,7 @@
 }
 
 .reviews__media {
-  padding: 157px 200px 142px 809px;
+  padding: 157px 60px 0 688px;
   position: relative;
 }
 
@@ -108,7 +109,7 @@
   height: 357px;
   position: absolute;
   border-radius: 20px;
-  left: 120px;
+  left: 0;
   top: 100px;
 }
 
@@ -126,4 +127,5 @@
   font-weight: 700;
   padding: 16px 40px;
   max-width: 300px;
+  margin-bottom: 42px;
 }

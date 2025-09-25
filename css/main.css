@@ -298,6 +298,7 @@ legend {
 .page__body {
   background-color: var(--color-basic);
   margin: 0;
+  overflow-x: hidden;
 }
 
 .header {
@@ -413,6 +414,7 @@ legend {
 
 .benefit {
   box-sizing: border-box;
+  width: 100%;
   padding-top: 129px;
   padding-bottom: 119px;
   background-color: var(--color-container);
@@ -422,7 +424,6 @@ legend {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 1280px;
   margin-right: auto;
   margin-left: auto;
   position: relative;
@@ -651,9 +652,9 @@ legend {
 }
 
 .bring__wrap {
-  width: 1280px;
   margin-right: auto;
   margin-left: auto;
+  width: 1280px;
 }
 
 .bring__title {
@@ -802,8 +803,9 @@ legend {
 
 .reviews {
   box-sizing: border-box;
-  padding-top: 100px 27px;
+  padding: 100px 27px;
   background-color: var(--color-container);
+  overflow-x: hidden;
 }
 
 .reviews__wrap {
@@ -823,7 +825,7 @@ legend {
   display: flex;
   gap: 24px;
   width: 1917px;
-  transform: translateX(-200px);
+  transform: translateX(-222px);
   align-items: center;
   margin: 0 auto 84px;
   position: relative;
@@ -898,7 +900,7 @@ legend {
 }
 
 .reviews__media {
-  padding: 157px 200px 142px 809px;
+  padding: 157px 60px 0 688px;
   position: relative;
 }
 
@@ -910,7 +912,7 @@ legend {
   height: 357px;
   position: absolute;
   border-radius: 20px;
-  left: 120px;
+  left: 0;
   top: 100px;
 }
 
@@ -928,6 +930,7 @@ legend {
   font-weight: 700;
   padding: 16px 40px;
   max-width: 300px;
+  margin-bottom: 42px;
 }
 
 .quantity {
@@ -1352,7 +1355,7 @@ legend {
 
 .footer__wrap {
   align-items: center;
-  width: 1281px;
+  width: 1280px;
   margin-right: auto;
   margin-left: 125px;
   position: relative;
