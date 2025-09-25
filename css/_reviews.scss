@@ -1,0 +1,129 @@
+.reviews {
+  box-sizing: border-box;
+  padding-top: 100px 27px;
+  background-color: var(--color-container);
+}
+
+.reviews__wrap {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.reviews__title {
+  margin: 0 auto 40px;
+  text-align: center;
+  font-size: 44px;
+  font-family: var(--font);
+  font-weight: 700;
+}
+
+.reviews__video {
+  display: flex;
+  gap: 24px;
+  width: 1917px;
+  transform: translateX(-200px);
+  align-items: center;
+  margin: 0 auto 84px;
+  position: relative;
+  justify-content: center;
+}
+
+.reviews__video::before {
+  content: "";
+  position: absolute;
+  display: block;
+  right: 268px;
+  top: 41.5%;
+  background-color: var(--color-main);
+  border-radius: 31.5px;
+  background-image: url("../image/right.svg");
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: center center;
+  width: 63px;
+  height: 63px;
+}
+
+.reviews__video::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 268px;
+  top: 41.5%;
+  background-color: var(--color-main);
+  border-radius: 31.5px;
+  background-image: url("../image/left.svg");
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: center center;
+  width: 63px;
+  height: 63px;
+}
+
+.reviews__video-box-main {
+  width: 737px;
+  position: relative;
+  display: block;
+}
+
+.reviews__video-box-main::after {
+  content: "";
+  position: absolute;
+  left: 45%;
+  top: 46.5%;
+  background-image: url("../image/youtube-red.svg");
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 58px;
+}
+
+.reviews__video-box-content {
+  position: absolute;
+  left: 0;
+  bottom: -53px;
+  font-size: 24px;
+  font-family: var(--font);
+  font-weight: 400;
+}
+
+.reviews__video-box {
+  width: 537px;
+}
+
+.reviews__img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.reviews__media {
+  padding: 157px 200px 142px 809px;
+  position: relative;
+}
+
+.reviews__media::before {
+  background: image-set(url("../image/bmw-gold.jpg") type("image/jpg") 1x,
+      url("../image/bmw-gold@2x.jpg") type("image/jpg") 2x);
+  content: "";
+  width: 612px;
+  height: 357px;
+  position: absolute;
+  border-radius: 20px;
+  left: 120px;
+  top: 100px;
+}
+
+.reviews__media-title {
+  margin: 0 auto 42px;
+  font-size: 44px;
+  font-family: var(--font);
+  font-weight: 700;
+  line-height: 1.23;
+}
+
+.reviews__button {
+  font-size: 18px;
+  font-family: var(--font2);
+  font-weight: 700;
+  padding: 16px 40px;
+  max-width: 300px;
+}

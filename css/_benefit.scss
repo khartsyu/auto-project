@@ -1,0 +1,110 @@
+.benefit {
+    box-sizing: border-box;
+    padding-top: 129px;
+    padding-bottom: 119px;
+    background-color: var(--color-container);
+}
+
+.benefit__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+
+.benefit__title {
+    text-align: center;
+    max-width: 1014px;
+    margin-left: 87px;
+    margin-right: 116px;
+    margin-bottom: 21px;
+    font-size: 44px;
+    font-family: var(--font);
+    font-weight: 800;
+    line-height: 1.23;
+
+}
+
+.benefit__content {
+    text-align: center;
+    max-width: 1014px;
+    font-size: 24px;
+    font-family: var(--font);
+    font-weight: 500;
+    line-height: 1.6;
+    margin-left: 87px;
+    margin-right: 116px;
+    margin-bottom: 26px;
+}
+
+.benefit__button {
+    font-size: 20px;
+    font-family: var(--font2);
+    font-weight: 700;
+    padding: 14px 39px;
+}
+
+.benefit__list {
+    display: flex;
+    padding-top: 40px;
+    gap: 23.5px;
+}
+
+.benefit__list-item {
+    width: 411px;
+    background-color: var(--color-basic);
+    padding: 24px 66px 85px 33px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
+}
+
+.benefit__list-item:first-child::before {
+    background: image-set(url("../image/key.png") type("image/png") 1x,
+            url("../image/key@2x.png") type("image/png") 2x);
+    content: "";
+    width: 94px;
+    height: 82px;
+    position: absolute;
+    right: 30px;
+    bottom: 18px;
+}
+
+.benefit__list-item:nth-child(2)::before {
+    background: image-set(url("../image/redauto.png") type("image/png") 1x,
+            url("../image/redauto@2x.png") type("image/png") 2x);
+    content: "";
+    width: 221.39px;
+    height: 120px;
+    position: absolute;
+    right: 10.6px;
+    bottom: 0;
+}
+
+.benefit__list-item:nth-child(3)::before {
+    background: image-set(url("../image/coins.png") type("image/png") 1x,
+            url("../image/coins@2x.png") type("image/png") 2x);
+    content: "";
+    width: 222px;
+    height: 127px;
+    position: absolute;
+    right: 16px;
+    bottom: 17px;
+}
+
+.benefit__item-title {
+    font-size: 36px;
+    font-family: var(--font);
+    font-weight: 700;
+    margin-bottom: 27px;
+}
+
+.benefit__item-content {
+    font-size: 16px;
+    font-family: var(--font);
+    font-weight: 400;
+    line-height: 1.75;
+}

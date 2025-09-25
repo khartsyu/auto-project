@@ -1,0 +1,157 @@
+.bring {
+  box-sizing: border-box;
+  padding-top: 102px;
+  padding-bottom: 100px;
+  background-color: var(--color-container);
+}
+
+.bring__wrap {
+  width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bring__title {
+  margin-bottom: 17px;
+  font-size: 44px;
+  font-family: var(--font);
+  font-weight: 800;
+  line-height: 1.23;
+
+}
+
+.bring__content {
+  font-size: 24px;
+  font-family: var(--font);
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 33px;
+}
+
+.bring__auto {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.bring__auto::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: -52px;
+  top: 45.5%;
+  background-color: var(--color-main);
+  border-radius: 31.5px;
+  background-image: url("../image/left.svg");
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: center center;
+  width: 63px;
+  height: 63px;
+}
+
+.bring__auto::before {
+  content: "";
+  position: absolute;
+  display: block;
+  right: -52px;
+  top: 45.5%;
+  background-color: var(--color-main);
+  border-radius: 31.5px;
+  background-image: url("../image/right.svg");
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: center center;
+  width: 63px;
+  height: 63px;
+}
+
+.bring__description {
+  width: 411px;
+  background-color: var(--color-basic);
+  border-radius: 20px;
+  padding: 20px 23px;
+}
+
+.bring__img {
+  border-radius: 12px;
+  margin-bottom: 27px;
+}
+
+.bring__description-title {
+  font-size: 24px;
+  font-family: var(--font);
+  font-weight: 700;
+  margin-bottom: 19px;
+}
+
+.bring__description-list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 26px;
+  gap: 16px;
+}
+
+.bring__description-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.bring__characteristics {
+  opacity: 0.5;
+  font-size: 16px;
+  font-family: var(--font);
+  font-weight: 400;
+  position: relative;
+}
+
+.bring__meaning {
+  font-size: 20px;
+  font-family: var(--font);
+  font-weight: 600;
+}
+
+.bring__prices {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.bring__prices-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.bring__prices-text {
+  font-size: 16px;
+  font-family: var(--font);
+  font-weight: 400;
+  max-width: 45%;
+}
+
+.bring__prices-price {
+  font-size: 24px;
+  font-family: var(--font);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.bring__prices-price-best {
+  color: var(--color-main);
+  font-size: 24px;
+  font-family: var(--font);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.bring__button {
+  font-size: 20px;
+  font-family: var(--font2);
+  font-weight: 700;
+  padding: 16px 39px;
+  width: 100%;
+}

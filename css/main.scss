@@ -1,0 +1,19 @@
+@import "_variables.scss";
+@import "_reset.scss";
+@import "_fonts.scss";
+
+.page__body {
+    background-color: var(--color-basic);
+    margin: 0;
+}
+
+@import "./_header.scss";
+@import "./_hero.scss";
+@import "./_benefit.scss";
+@import "./_aboutus.scss";
+@import "./_bring.scss";
+@import "./_reviews.scss";
+@import "./_quantity.scss";
+@import "./_team.scss";
+@import "./_application.scss";
+@import "./_footer.scss";

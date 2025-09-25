@@ -1,0 +1,44 @@
+.hero {
+    width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 151px;
+    padding-top: 114px;
+    position: relative;
+}
+
+.hero::before {
+    background: image-set(url("../image/auto.png") type("image/png") 1x,
+            url("../image/auto@2x.png") type("image/png") 2x);
+    content: "";
+    width: 816px;
+    height: 417px;
+    position: absolute;
+    right: -124px;
+    bottom: 44px;
+}
+
+.hero__title {
+    max-width: 672px;
+    font-size: 52px;
+    font-family: var(--font);
+    font-weight: 900;
+    line-height: 1.19;
+    margin-bottom: 20px;
+}
+
+.hero__content {
+    max-width: 600px;
+    font-size: 20px;
+    font-family: var(--font);
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 44px;
+}
+
+.hero__button {
+    font-size: 24px;
+    font-family: var(--font);
+    font-weight: 700;
+    padding: 18px 54px;
+}

@@ -1,0 +1,196 @@
+.application {
+  box-sizing: border-box;
+  padding: 127px 0 100px;
+  background: image-set(url("../image/mountains.jpg") type("image/jpg") 1x,
+      url("../image/mountains@2x.jpg") type("image/jpg") 2x);
+}
+
+.application__wrap {
+  display: flex;
+  width: 1280px;
+  gap: 41px;
+  margin-right: auto;
+  margin-left: auto;
+  align-items: stretch;
+}
+
+.application__form {
+  padding: 42px 33px 50px;
+  background-color: var(--color-basic);
+  border-radius: 20px;
+  width: 459px;
+}
+
+.application__form-title {
+  font-size: 24px;
+  font-family: var(--font);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.application__form-info {
+  width: 393px;
+  font-size: 16px;
+  font-family: var(--font);
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.application__form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.application__input-field {
+  border: 1px solid var(--color-font);
+  border-radius: 8px;
+  padding: 17px 20px;
+  width: 100%;
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-family: var(--font);
+  font-weight: 400;
+  color: #CCCCCC;
+}
+
+.application__button {
+  font-size: 20px;
+  font-family: var(--font2);
+  font-weight: 600;
+  padding: 18px 39px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.application__confidentiality {
+  font-size: 12px;
+  font-family: var(--font);
+  font-weight: 400;
+  line-height: 1.33;
+  color: #878787;
+  margin-bottom: 23px;
+  display: flex;
+  gap: 8px;
+  width: 340px;
+}
+
+.application__confidentiality-checkbox {
+  appearance: none;
+  display: block;
+  position: relative;
+  width: 32px;
+  height: 21px;
+  border-radius: 3px;
+  border: 1px solid var(--color-font);
+  margin: 6px 0;
+  transition: 500ms;
+}
+
+.application__confidentiality-checkbox:checked::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url("../image/checkbox.svg");
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+.application__form-messengers {
+  font-size: 20px;
+  font-family: var(--font);
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.application__form-messengers-list {
+  display: flex;
+  gap: 10px;
+}
+
+.application__form-messengers-item {
+  border: 1px solid var(--color-main);
+  border-radius: 20px;
+  padding: 11px 16px 8px 44px;
+  position: relative;
+  font-size: 16px;
+  font-family: var(--font);
+  font-weight: 400;
+}
+
+.application__form-messengers-item:first-child::before {
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  background-image: url("../image/whatsapp.svg");
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+.application__form-messengers-item:nth-child(2)::before {
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  background-image: url("../image/telegram.svg");
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+.application__result {
+  padding: 40px 103px 50px 40px;
+  background-color: var(--color-basic);
+  border-radius: 20px;
+  width: 761px;
+}
+
+.application__result-title {
+  font-size: 44px;
+  font-family: var(--font);
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.application__result-list {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.application__result-item {
+  font-size: 20px;
+  font-family: var(--font);
+  font-weight: 400;
+  padding-left: 51px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.application__result-item::before {
+  position: absolute;
+  left: 0;
+  top: 7px;
+  background-image: url("../image/check.svg");
+  content: "";
+  width: 36px;
+  height: 36px;
+  border-radius: 26px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
