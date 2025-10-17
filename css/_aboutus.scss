@@ -1,11 +1,20 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
 .aboutus {
+    max-width: 1920px;
+    @include m.wrapper-desktop;
+    overflow-x: hidden;
+}
+
+.aboutus__wrap {
     display: flex;
     gap: 100px;
 }
 
 .aboutus__picture {
     width: 50%;
-    background-color: var(--color-container);
+    background-color: v.$color-container;
 }
 
 .aboutus__img {
@@ -23,14 +32,14 @@
 
 .aboutus__title {
     font-size: 44px;
-    font-family: var(--font);
+    font-family: v.$font;
     font-weight: 900;
     margin-bottom: 14px;
 }
 
 .aboutus__content {
     font-size: 24px;
-    font-family: var(--font);
+    font-family: v.$font;
     font-weight: 500;
     line-height: 1.33;
     margin-bottom: 24px;
@@ -45,7 +54,7 @@
 
 .aboutus__advantage-item {
     font-size: 20px;
-    font-family: var(--font);
+    font-family: v.$font;
     font-weight: 400;
     padding: 14px 0 14px 76px;
     position: relative;
@@ -56,7 +65,7 @@
     left: 0;
     top: 0;
     background-image: url("../image/car.svg");
-    background-color: var(--color-main);
+    background-color: v.$color-main;
     content: "";
     width: 52px;
     height: 52px;
@@ -72,7 +81,7 @@
     left: 0;
     top: 0;
     background-image: url("../image/medal.svg");
-    background-color: var(--color-main);
+    background-color: v.$color-main;
     content: "";
     width: 52px;
     height: 52px;
@@ -88,7 +97,7 @@
     left: 0;
     top: 0;
     background-image: url("../image/truck.svg");
-    background-color: var(--color-main);
+    background-color: v.$color-main;
     content: "";
     width: 52px;
     height: 52px;
@@ -102,7 +111,7 @@
 .aboutus__feature {
     max-width: 486px;
     font-size: 16px;
-    font-family: var(--font);
+    font-family: v.$font;
     font-weight: 400;
     line-height: 1.5;
     padding: 10px 16px;
@@ -113,7 +122,7 @@
 
 .aboutus__button {
     font-size: 20px;
-    font-family: var(--font2);
+    font-family: v.$font2;
     font-weight: 700;
     padding: 14px 39px;
 }

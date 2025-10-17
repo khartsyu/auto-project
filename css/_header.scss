@@ -1,3 +1,6 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
 .header {
     box-sizing: border-box;
     padding-top: 28px;
@@ -7,9 +10,8 @@
     display: flex;
     width: 1280px;
     height: 78px;
-    margin-right: auto;
-    margin-left: auto;
     align-items: center;
+    @include m.wrapper-desktop;
 }
 
 .header__logo {
@@ -23,14 +25,14 @@
     flex-wrap: wrap;
     gap: 10px 40px;
     font-size: 16px;
-    font-family: var(--font);
+    font-family: v.$font;
     font-weight: 400;
     letter-spacing: 0.02em;
     margin-right: 103px;
 }
 
 .header__link {
-    color: var(--color-font);
+    color: v.$color-font;
 }
 
 .header__address {
@@ -55,11 +57,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: var(--font);
+    font-family: v.$font;
     font-weight: 500;
     gap: 4px;
 }
 
 .header__tel-link {
-    color: var(--font);
+    color: v.$color-font;
 }

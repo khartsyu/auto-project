@@ -1,27 +1,29 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
 .bring {
   box-sizing: border-box;
   padding-top: 102px;
   padding-bottom: 100px;
-  background-color: var(--color-container);
+  background-color: v.$color-container;
 }
 
 .bring__wrap {
-  margin-right: auto;
-  margin-left: auto;
   width: 1280px;
+  @include m.wrapper-desktop;
 }
 
 .bring__title {
   margin-bottom: 17px;
   font-size: 44px;
-  font-family: var(--font);
+  font-family: v.$font;
   font-weight: 800;
   line-height: 1.23;
 }
 
 .bring__content {
   font-size: 24px;
-  font-family: var(--font);
+  font-family: v.$font;
   font-weight: 500;
   line-height: 1.6;
   margin-bottom: 33px;
@@ -34,41 +36,23 @@
   position: relative;
 }
 
-.bring__auto::after {
-  content: "";
+.bring__button-forward {
   position: absolute;
-  display: block;
-  left: -52px;
-  top: 45.5%;
-  background-color: var(--color-main);
-  border-radius: 31.5px;
-  background-image: url("../image/left.svg");
-  background-repeat: no-repeat;
-  background-size: 20%;
-  background-position: center center;
-  width: 63px;
-  height: 63px;
-}
-
-.bring__auto::before {
-  content: "";
-  position: absolute;
-  display: block;
   right: -52px;
   top: 45.5%;
-  background-color: var(--color-main);
-  border-radius: 31.5px;
   background-image: url("../image/right.svg");
-  background-repeat: no-repeat;
-  background-size: 20%;
-  background-position: center center;
-  width: 63px;
-  height: 63px;
+}
+
+.bring__button-backward {
+  position: absolute;
+  left: -52px;
+  top: 45.5%;
+  background-image: url("../image/left.svg");
 }
 
 .bring__description {
   width: 411px;
-  background-color: var(--color-basic);
+  background-color: v.$color-basic;
   border-radius: 20px;
   padding: 20px 23px;
 }
@@ -80,7 +64,7 @@
 
 .bring__description-title {
   font-size: 24px;
-  font-family: var(--font);
+  font-family: v.$font;
   font-weight: 700;
   margin-bottom: 19px;
 }
@@ -101,14 +85,14 @@
 .bring__characteristics {
   opacity: 0.5;
   font-size: 16px;
-  font-family: var(--font);
+  font-family: v.$font;
   font-weight: 400;
   position: relative;
 }
 
 .bring__meaning {
   font-size: 20px;
-  font-family: var(--font);
+  font-family: v.$font;
   font-weight: 600;
 }
 
@@ -127,29 +111,29 @@
 
 .bring__prices-text {
   font-size: 16px;
-  font-family: var(--font);
+  font-family: v.$font;
   font-weight: 400;
   max-width: 45%;
 }
 
 .bring__prices-price {
   font-size: 24px;
-  font-family: var(--font);
+  font-family: v.$font;
   font-weight: 400;
   line-height: 1;
 }
 
 .bring__prices-price-best {
-  color: var(--color-main);
+  color: v.$color-main;
   font-size: 24px;
-  font-family: var(--font);
+  font-family: v.$font;
   font-weight: 900;
   line-height: 1;
 }
 
 .bring__button {
   font-size: 20px;
-  font-family: var(--font2);
+  font-family: v.$font2;
   font-weight: 700;
   padding: 16px 39px;
   width: 100%;

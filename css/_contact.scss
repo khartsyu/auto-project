@@ -1,0 +1,97 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+.contact {
+  box-sizing: border-box;
+  padding: 101px 0 62px;
+  background-color: v.$color-container;
+}
+
+.contact__wrap {
+  align-items: center;
+  width: 1280px;
+  position: relative;
+  @include m.wrapper-desktop;
+}
+
+.contact__title {
+  font-size: 44px;
+  font-family: v.$font;
+  font-weight: 700;
+  margin-bottom: 56px;
+}
+
+.contact__list {
+  display: grid;
+  grid-template-columns: 270px 276px 420px;
+  grid-template-rows: auto 75px 321px;
+  gap: 37px 157px;
+}
+
+.contact__address {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.contact__time {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.contact__tel {
+  grid-row: 1;
+  grid-column: 3;
+}
+
+.contact__email {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.contact__social {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.contact__map {
+  grid-row: 3;
+  grid-column: span 3;
+  background: image-set(url("../image/webp/map.webp") type("image/webp") 1x,
+      url("../image/webp/map@2x.webp") type("image/webp") 2x,
+      url("../image/map.jpg") type("image/jpg") 1x,
+      url("../image/map@2x.jpg") type("image/jpg") 2x);
+  border-radius: 18px;
+}
+
+.contact__map-section {
+  border-radius: 18px;
+  height: 321px;
+}
+
+.contact__name {
+  font-size: 20px;
+  font-family: v.$font;
+  font-weight: 400;
+  opacity: 0.5;
+  margin-bottom: 18px;
+}
+
+.contact__content {
+  display: block;
+  font-size: 20px;
+  font-family: v.$font;
+  font-weight: 500;
+  line-height: 1.4;
+  color: v.$color-font;
+}
+
+.contact__social-icon {
+  display: flex;
+  width: 110px;
+  gap: 10px;
+}
+
+.contact__icon {
+  width: 30px;
+  height: 30px;
+}

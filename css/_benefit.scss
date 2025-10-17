@@ -1,18 +1,20 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
 .benefit {
     box-sizing: border-box;
     width: 100%;
     padding-top: 129px;
     padding-bottom: 119px;
-    background-color: var(--color-container);
+    background-color: v.$color-container;
 }
 
 .benefit__wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: auto;
-    margin-left: auto;
     position: relative;
+    @include m.wrapper-desktop;
 }
 
 .benefit__title {
@@ -22,7 +24,7 @@
     margin-right: 116px;
     margin-bottom: 21px;
     font-size: 44px;
-    font-family: var(--font);
+    font-family: v.$font;
     font-weight: 800;
     line-height: 1.23;
 
@@ -32,7 +34,7 @@
     text-align: center;
     max-width: 1014px;
     font-size: 24px;
-    font-family: var(--font);
+    font-family: v.$font;
     font-weight: 500;
     line-height: 1.6;
     margin-left: 87px;
@@ -42,7 +44,7 @@
 
 .benefit__button {
     font-size: 20px;
-    font-family: var(--font2);
+    font-family: v.$font2;
     font-weight: 700;
     padding: 14px 39px;
 }
@@ -55,7 +57,7 @@
 
 .benefit__list-item {
     width: 411px;
-    background-color: var(--color-basic);
+    background-color: v.$color-basic;
     padding: 24px 66px 85px 33px;
     border-radius: 20px;
     position: relative;
@@ -63,8 +65,10 @@
 }
 
 .benefit__list-item:first-child::before {
-    background: image-set(url("../image/key.png") type("image/png") 1x,
-            url("../image/key@2x.png") type("image/png") 2x);
+    background: image-set(url("../image/webp/key.webp") type("image/webp") 1x,
+            url("../image/webp/key@2x.webp") type("image/webp") 2x,
+        url("../image/key.png") type("image/png") 1x,
+        url("../image/key@2x.png") type("image/png") 2x);
     content: "";
     width: 94px;
     height: 82px;
@@ -74,8 +78,10 @@
 }
 
 .benefit__list-item:nth-child(2)::before {
-    background: image-set(url("../image/redauto.png") type("image/png") 1x,
-            url("../image/redauto@2x.png") type("image/png") 2x);
+    background: image-set(url("../image/webp/redauto.webp") type("image/webp") 1x,
+            url("../image/webp/redauto@2x.webp") type("image/webp") 2x,
+        url("../image/redauto.png") type("image/png") 1x,
+        url("../image/redauto@2x.png") type("image/png") 2x);
     content: "";
     width: 221.39px;
     height: 120px;
@@ -85,8 +91,10 @@
 }
 
 .benefit__list-item:nth-child(3)::before {
-    background: image-set(url("../image/coins.png") type("image/png") 1x,
-            url("../image/coins@2x.png") type("image/png") 2x);
+    background: image-set(url("../image/webp/coins.webp") type("image/webp") 1x,
+            url("../image/webp/coins@2x.webp") type("image/webp") 2x,
+        url("../image/coins.png") type("image/png") 1x,
+        url("../image/coins@2x.png") type("image/png") 2x);
     content: "";
     width: 222px;
     height: 127px;
@@ -97,14 +105,14 @@
 
 .benefit__item-title {
     font-size: 36px;
-    font-family: var(--font);
+    font-family: v.$font;
     font-weight: 700;
     margin-bottom: 27px;
 }
 
 .benefit__item-content {
     font-size: 16px;
-    font-family: var(--font);
+    font-family: v.$font;
     font-weight: 400;
     line-height: 1.75;
 }
